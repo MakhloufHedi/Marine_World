@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EndHard1Activity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/foody_fish_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/foody_fish_background"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/game_over_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="@string/game_over_title"
+        android:textSize="30sp" />
+    <TextView
+        android:layout_below="@+id/game_over_text"
+        android:layout_centerInParent="true"
+        android:id="@+id/final_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/final_score"
+        android:textSize="40sp"
+        android:layout_marginTop="70dp"/>
+    <TextView
+        android:layout_below="@+id/final_score"
+        android:id="@+id/high_score3"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/high_score"
+        android:textSize="20sp"
+        android:layout_marginTop="60dp"/>
+    <Button
+        android:layout_below="@+id/high_score3"
+        android:layout_centerInParent="true"
+        android:id="@+id/retry_button_hard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/try_again"
+        android:layout_marginTop="50dp"
+        />
+    <Button
+        android:layout_below="@+id/retry_button_hard"
+        android:layout_centerInParent="true"
+        android:id="@+id/game_button_hard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/game_menu"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:layout_below="@+id/game_button_hard"
+        android:layout_centerInParent="true"
+        android:id="@+id/menu_button_hard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_menu"/>
+
+
+</RelativeLayout>

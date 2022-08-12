@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_background"
+    tools:context=".MainActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/welcome_anim"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_repeatMode="reverse"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/welcome_anim"
+        android:layout_marginTop="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_anim">
+
+        <TextView
+            android:id="@+id/menu_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_your_game"
+            android:textSize="30sp"
+            android:textColor="@color/text_orange"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/watergalon"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/game1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:elevation="10dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="60dp"
+            android:layout_below="@id/menu_text"
+            app:cardBackgroundColor="@color/foody_fish_blue">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/foody_fish_logo" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/game3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/game1"
+            android:layout_centerHorizontal="true"
+            android:elevation="10dp"
+            app:cardCornerRadius="60dp"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/marine_quiz_blue">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/marine_quiz_logo" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/game2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/game3"
+            android:layout_centerHorizontal="true"
+            android:elevation="10dp"
+            app:cardCornerRadius="60dp"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/foody_fish_blue">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/foody_fish_logo" />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
