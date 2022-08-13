@@ -244,7 +244,7 @@ public class QuizActivity extends AppCompatActivity {
                         }
                     });
                 }
-            }, 1000,500);}
+            }, 1000,800);}
 
         else if (getCatLevel.equals("level2")) {
 
@@ -292,7 +292,7 @@ public class QuizActivity extends AppCompatActivity {
                         }
                     });
                 }
-            }, 1000,500);
+            }, 1000,800);
         }
         else {
             quizTimer = new Timer();
@@ -337,7 +337,7 @@ public class QuizActivity extends AppCompatActivity {
                         }
                     });
                 }
-            }, 1000,500);}
+            }, 1000,800);}
 
     }
 
