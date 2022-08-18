@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class GameOver1 extends AppCompatActivity {
+public class GameOver3 extends AppCompatActivity {
 
 
     @Override
@@ -21,30 +21,30 @@ public class GameOver1 extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("GAME_DATA", Context.MODE_PRIVATE);
         int highScore = sharedPreferences.getInt("HIGH_SCORE1", 0);
         TextView final_score = findViewById(R.id.final_score);
-        TextView high_score1 = findViewById(R.id.high_score1);
+        TextView high_score3 = findViewById(R.id.high_score1);
 
         final_score.setText(points + "");
 
         if (points > highScore) {
             //Update high score
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putInt("HIGH_SCORE1", points);
+            editor.putInt("HIGH_SCORE3", points);
             editor.apply();
 
-            high_score1.setText("High Score : " + points);
+            high_score3.setText("High Score : " + points);
         } else {
-            high_score1.setText("High Score : " + highScore);
+            high_score3.setText("High Score : " + highScore);
         }
     }
 
     public void restart(View view) {
-        Intent intent = new Intent(GameOver1.this, StageActivity1.class);
+        Intent intent = new Intent(GameOver3.this, StageActivity1.class);
         startActivity(intent);
         finish();
     }
 
     public void exit(View view) {
-        Intent intent = new Intent(GameOver1.this, MainActivity.class);
+        Intent intent = new Intent(GameOver3.this, MainActivity.class);
         startActivity(intent);
         finish();
 

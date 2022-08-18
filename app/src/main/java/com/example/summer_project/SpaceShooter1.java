@@ -26,7 +26,7 @@ public class SpaceShooter1 extends View {
     long UPDATE_MILLIS = 30;
     static int screenWidth, screenHeight;
     int points = 0;
-    int life = 1;
+    int life = 3;
     Paint scorePaint;
     int TEXT_SIZE = 80;
     boolean paused = false;

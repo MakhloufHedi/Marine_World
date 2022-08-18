@@ -26,7 +26,7 @@ public class SpaceShooter2 extends View {
     long UPDATE_MILLIS = 30;
     static int screenWidth, screenHeight;
     int points = 0;
-    int life = 4;
+    int life = 2;
     Paint scorePaint;
     int TEXT_SIZE = 80;
     boolean paused = false;
@@ -83,7 +83,7 @@ public class SpaceShooter2 extends View {
         if(life == 0){
             paused = true;
             handler = null;
-            Intent intent = new Intent(context, GameOver1.class);
+            Intent intent = new Intent(context, GameOver2.class);
             intent.putExtra("points", points);
             context.startActivity(intent);
             ((Activity) context).finish();
