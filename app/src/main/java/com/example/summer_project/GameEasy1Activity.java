@@ -14,7 +14,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -36,7 +35,7 @@ public class GameEasy1Activity extends AppCompatActivity {
     private float sharkX,sharkY;
 
     //score
-    private int score;
+    private int score ,life ;
 
     //timer
     private Timer timer = new Timer();
@@ -89,6 +88,7 @@ public class GameEasy1Activity extends AppCompatActivity {
 
         score_label.setText("Score : " + score);
 
+         life = 3 ;
     }
 
 
@@ -99,16 +99,16 @@ public class GameEasy1Activity extends AppCompatActivity {
 //small fish generation
         smallX -= 12;
         if (smallX < 0) {
-            smallX = screenWidth + 20;
+            smallX = screenWidth + 25;
             smallY = (float) Math.floor(Math.random() * (frameHeight - small_fish.getHeight()));
         }
         small_fish.setX(smallX);
         small_fish.setY(smallY);
 
 //shark generation
-        sharkX -= 16;
+        sharkX -= 20;
         if (sharkX < 0) {
-            sharkX = screenWidth + 10;
+            sharkX = screenWidth + 20;
             sharkY = (float) Math.floor(Math.random() * (frameHeight - shark.getHeight()));
         }
         shark.setX(sharkX);
@@ -117,7 +117,7 @@ public class GameEasy1Activity extends AppCompatActivity {
 //big fish generation
         bigX -= 20;
         if (bigX < 0) {
-            bigX = screenWidth + 5000;
+            bigX = screenWidth + 3000;
             bigY = (float) Math.floor(Math.random() * (frameHeight - big_fish.getHeight()));
         }
         big_fish.setX(bigX);
@@ -165,37 +165,36 @@ public class GameEasy1Activity extends AppCompatActivity {
         }
 
 //shark hit
-//        float sharkCenterX = sharkX + shark.getWidth() / 2.0f;
         float sharkCenterY = sharkY + shark.getHeight() /2.0f;
 
-//        int s ;
-//        s = 0;
-//
-//        if (0 <= sharkX && sharkX <= mainSize &&
-//                mainY <= sharkCenterY && sharkCenterY <= mainY + mainSize ) {
-//            heart1.setVisibility(View.GONE);
-//            s = s+1;
-//        }
-//        if (0 <= sharkX && sharkX <= mainSize &&
-//                mainY <= sharkCenterY && sharkCenterY <= mainY + mainSize && s == 1) {
-//            heart2.setVisibility(View.GONE);
-//            s = s+1 ;
-//        }
         if (0 <= sharkX && sharkX <= mainSize &&
                 mainY <= sharkCenterY && sharkCenterY <= mainY + mainSize){
-            soundPlayer.playDamageSound();
-            soundPlayer.playGameOverSound();
-            //game over
-            heart3.setVisibility(View.GONE);
-            if (timer != null){
-                timer.cancel();
-                timer = null;
+            life--;
+            sharkX = -100.0f;
+            sharkY = -100.0f;
+            if (life == 2){
+                soundPlayer.playDamageSound();
+                heart3.setVisibility(View.GONE);
             }
+            else if (life == 1){
+                soundPlayer.playDamageSound();
+                heart2.setVisibility(View.GONE);
+            }
+            else if (life == 0){
+              soundPlayer.playDamageSound();
+              soundPlayer.playGameOverSound();
+              //game over
+              heart1.setVisibility(View.GONE);
+              if (timer != null){
+                  timer.cancel();
+                  timer = null;
+              }
 
-            //show result
-            Intent intent = new Intent(getApplicationContext(), EndEasy1Activity.class);
-            intent.putExtra("SCORE",score);
-            startActivity(intent);
+              //show result
+              Intent intent = new Intent(getApplicationContext(), EndEasy1Activity.class);
+              intent.putExtra("SCORE",score);
+              startActivity(intent);
+              }
         }
     }
     @Override
@@ -217,15 +216,10 @@ public class GameEasy1Activity extends AppCompatActivity {
             timer.schedule(new TimerTask() {
                 @Override
                 public void run() {
-                    handler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            changePos();
-                        }
-                    });
+                    handler.post(() -> changePos());
 
                 }
-            },0,20);
+            },0,25);
 
         } else {
             if (event.getAction() == MotionEvent.ACTION_DOWN){

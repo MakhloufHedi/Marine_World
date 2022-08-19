@@ -14,7 +14,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -23,7 +22,7 @@ public class GameMedium1Activity extends AppCompatActivity {
 
     //elements
     private TextView score_label , start_label ;
-    private ImageView main_fish , small_fish , big_fish , shark , heart1 , heart2 , heart3;
+    private ImageView main_fish , small_fish , big_fish , shark , heart1 , heart2 ;
 
     private int screenWidth;
     private int frameHeight;
@@ -36,7 +35,7 @@ public class GameMedium1Activity extends AppCompatActivity {
     private float sharkX,sharkY;
 
     //score
-    private int score;
+    private int score, life;
 
     //timer
     private Timer timer = new Timer();
@@ -65,7 +64,6 @@ public class GameMedium1Activity extends AppCompatActivity {
 
         heart1 = findViewById(R.id.heart1);
         heart2 = findViewById(R.id.heart2);
-        heart3 = findViewById(R.id.heart3);
 
 
 //screen size
@@ -87,6 +85,8 @@ public class GameMedium1Activity extends AppCompatActivity {
         shark.setY(-100.0f);
 
         score_label.setText("Score : " + score);
+
+        life = 2;
     }
 
     public void changePos() {
@@ -94,16 +94,16 @@ public class GameMedium1Activity extends AppCompatActivity {
         hitCheck();
 
 //small fish generation
-        smallX -= 12;
+        smallX -= 14;
         if (smallX < 0) {
-            smallX = screenWidth + 20;
+            smallX = screenWidth + 30;
             smallY = (float) Math.floor(Math.random() * (frameHeight - small_fish.getHeight()));
         }
         small_fish.setX(smallX);
         small_fish.setY(smallY);
 
 //shark generation
-        sharkX -= 16;
+        sharkX -= 20;
         if (sharkX < 0) {
             sharkX = screenWidth + 10;
             sharkY = (float) Math.floor(Math.random() * (frameHeight - shark.getHeight()));
@@ -162,37 +162,33 @@ public class GameMedium1Activity extends AppCompatActivity {
         }
 
 //shark hit
-//        float sharkCenterX = sharkX + shark.getWidth() / 2.0f;
         float sharkCenterY = sharkY + shark.getHeight() /2.0f;
 
-//        int s ;
-//        s = 0;
-//
-//        if (0 <= sharkX && sharkX <= mainSize &&
-//                mainY <= sharkCenterY && sharkCenterY <= mainY + mainSize ) {
-//            heart1.setVisibility(View.GONE);
-//            s = s+1;
-//        }
-//        if (0 <= sharkX && sharkX <= mainSize &&
-//                mainY <= sharkCenterY && sharkCenterY <= mainY + mainSize && s == 1) {
-//            heart2.setVisibility(View.GONE);
-//            s = s+1 ;
-//        }
+
         if (0 <= sharkX && sharkX <= mainSize &&
                 mainY <= sharkCenterY && sharkCenterY <= mainY + mainSize){
-            soundPlayer.playDamageSound();
-            soundPlayer.playGameOverSound();
-            //game over
-            heart3.setVisibility(View.GONE);
-            if (timer != null){
-                timer.cancel();
-                timer = null;
+            life--;
+            sharkX = -100.0f;
+            sharkY = -100.0f;
+            if (life == 1){
+                soundPlayer.playDamageSound();
+                heart1.setVisibility(View.GONE);
             }
+            else if (life == 0){
+                soundPlayer.playDamageSound();
+                soundPlayer.playGameOverSound();
+                //game over
+                heart2.setVisibility(View.GONE);
+                if (timer != null){
+                    timer.cancel();
+                    timer = null;
+                }
 
             //show result
             Intent intent = new Intent(getApplicationContext(), EndMedium1Activity.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
+            }
         }
     }
     @Override
@@ -214,15 +210,10 @@ public class GameMedium1Activity extends AppCompatActivity {
             timer.schedule(new TimerTask() {
                 @Override
                 public void run() {
-                    handler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            changePos();
-                        }
-                    });
+                    handler.post(() -> changePos());
 
                 }
-            },0,20);
+            },0,22);
 
         } else {
             if (event.getAction() == MotionEvent.ACTION_DOWN){

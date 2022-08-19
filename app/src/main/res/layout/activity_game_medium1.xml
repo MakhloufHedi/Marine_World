@@ -42,15 +42,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="5dp"/>
 
-    <ImageView
-        android:id="@+id/heart3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/full_heart"
-        android:layout_toEndOf="@id/heart2"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="5dp" />
-
 
     <FrameLayout
         android:id="@+id/frame"
