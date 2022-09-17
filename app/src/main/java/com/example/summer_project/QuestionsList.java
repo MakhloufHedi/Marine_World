@@ -1,7 +1,7 @@
 package com.example.summer_project;
 
 public class QuestionsList {
-
+// la class quesyionList qui contient comme attribut question option 1 2 3 et 4 et la reponse correcte et la reponse selectionne
     private String question, option1, option2, option3, option4,answer;
     private String userSelectedAnswer;
 
