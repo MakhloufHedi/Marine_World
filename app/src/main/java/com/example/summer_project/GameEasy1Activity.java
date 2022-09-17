@@ -1,3 +1,4 @@
+//made by hedi : easy level code
 package com.example.summer_project;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -68,7 +69,7 @@ public class GameEasy1Activity extends AppCompatActivity {
         heart3 = findViewById(R.id.heart3);
 
 
-//screen size
+//set screen size
         WindowManager windowManager = getWindowManager();
         Display display = windowManager.getDefaultDisplay();
         Point size = new Point();
@@ -78,7 +79,7 @@ public class GameEasy1Activity extends AppCompatActivity {
         //size
         int screenHeight = size.y;
 
-//initial positions
+//put characters in initial positions
         big_fish.setX(-90.0f);
         big_fish.setY(-90.0f);
         small_fish.setX(-90.0f);
@@ -97,9 +98,9 @@ public class GameEasy1Activity extends AppCompatActivity {
         hitCheck();
 
 //small fish generation
-        smallX -= 12;
+        smallX -= 12; //change number to controle speed
         if (smallX < 0) {
-            smallX = screenWidth + 25;
+            smallX = screenWidth + 25; // change number to controle frequency
             smallY = (float) Math.floor(Math.random() * (frameHeight - small_fish.getHeight()));
         }
         small_fish.setX(smallX);
@@ -122,6 +123,8 @@ public class GameEasy1Activity extends AppCompatActivity {
         }
         big_fish.setX(bigX);
         big_fish.setY(bigY);
+        
+ //if you touch the screen the player moves up if not it moves down
 
         if (action_flg){
             //touch
@@ -148,7 +151,7 @@ public class GameEasy1Activity extends AppCompatActivity {
 
         if (0 <= smallCenterX && smallCenterX <= mainSize &&
                 mainY <= smallCenterY && smallCenterY <= mainY + mainSize) {
-            smallX = -100.0f;
+            smallX = -100.0f; // move fish outside the screen 
             score += 10;
             soundPlayer.playScoreSound();
         }
@@ -159,7 +162,7 @@ public class GameEasy1Activity extends AppCompatActivity {
 
         if (0 <= bigCenterX && bigCenterX <= mainSize &&
                 mainY <= bigCenterY && bigCenterY <= mainY + mainSize) {
-            bigX = -100.0f;
+            bigX = -100.0f; // move fish outside the screen 
             score += 30;
             soundPlayer.playScoreSound();
         }
@@ -170,11 +173,11 @@ public class GameEasy1Activity extends AppCompatActivity {
         if (0 <= sharkX && sharkX <= mainSize &&
                 mainY <= sharkCenterY && sharkCenterY <= mainY + mainSize){
             life--;
-            sharkX = -100.0f;
+            sharkX = -100.0f; // move shark outside the screen
             sharkY = -100.0f;
             if (life == 2){
                 soundPlayer.playDamageSound();
-                heart3.setVisibility(View.GONE);
+                heart3.setVisibility(View.GONE); // remove hearts
             }
             else if (life == 1){
                 soundPlayer.playDamageSound();
@@ -186,17 +189,18 @@ public class GameEasy1Activity extends AppCompatActivity {
               //game over
               heart1.setVisibility(View.GONE);
               if (timer != null){
-                  timer.cancel();
+                  timer.cancel();  //stop game
                   timer = null;
               }
 
-              //show result
+            //show result in end screen and carry score to end screen
               Intent intent = new Intent(getApplicationContext(), EndEasy1Activity.class);
               intent.putExtra("SCORE",score);
               startActivity(intent);
               }
         }
     }
+    //when you access the game you need to touch the screen to start the game 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
@@ -213,7 +217,7 @@ public class GameEasy1Activity extends AppCompatActivity {
 
             start_label.setVisibility(View.GONE);
 
-            timer.schedule(new TimerTask() {
+            timer.schedule(new TimerTask() { //start game timer
                 @Override
                 public void run() {
                     handler.post(() -> changePos());
