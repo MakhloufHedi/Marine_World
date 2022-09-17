@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         game2.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, StartUp1.class);
+            Intent intent = new Intent(MainActivity.this, MenuActivity2.class);
             startActivity(intent);
             overridePendingTransition(R.anim.zoom_out,R.anim.static_animation);
         });
