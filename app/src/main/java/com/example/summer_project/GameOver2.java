@@ -24,7 +24,7 @@ public class GameOver2 extends AppCompatActivity {
         TextView high_score2 = findViewById(R.id.high_score1);
 
         final_score.setText(points + "");
-
+//end activity of the medium level
         if (points > highScore) {
             //Update high score
             SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -36,13 +36,13 @@ public class GameOver2 extends AppCompatActivity {
             high_score2.setText("High Score : " + highScore);
         }
     }
-
+//button to retry the level
     public void restart(View view) {
         Intent intent = new Intent(GameOver2.this, MenuActivity2.class);
         startActivity(intent);
         finish();
     }
-
+//button to go on Main Menu
     public void exit(View view) {
         Intent intent = new Intent(GameOver2.this, MainActivity.class);
         startActivity(intent);
