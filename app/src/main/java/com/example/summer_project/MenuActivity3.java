@@ -23,7 +23,7 @@ public class MenuActivity3 extends AppCompatActivity {
         final LinearLayout medium = findViewById(R.id.mediumLayout);
         final LinearLayout hard = findViewById(R.id.hardLayout);
         final Button startBtn = findViewById(R.id.startQuizBtn);
-
+// Ajuster le background lors d"un click sur level easy
         easy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,7 +33,7 @@ public class MenuActivity3 extends AppCompatActivity {
                 hard.setBackgroundResource(R.drawable.round_back_wrrite10);
             }
         });
-
+// Ajuster le background lors d"un click sur level medium
         medium.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,7 +44,7 @@ public class MenuActivity3 extends AppCompatActivity {
 
             }
         });
-
+// Ajuster le background lors d"un click sur level hard
         hard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,7 +55,7 @@ public class MenuActivity3 extends AppCompatActivity {
 
             }
         });
-
+// aller a la page suivante
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
