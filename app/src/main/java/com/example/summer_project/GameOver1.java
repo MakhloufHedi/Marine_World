@@ -38,7 +38,7 @@ public class GameOver1 extends AppCompatActivity {
     }
 
     public void restart(View view) {
-        Intent intent = new Intent(GameOver1.this, StageActivity1.class);
+        Intent intent = new Intent(GameOver1.this, MenuActivity2.class);
         startActivity(intent);
         finish();
     }
