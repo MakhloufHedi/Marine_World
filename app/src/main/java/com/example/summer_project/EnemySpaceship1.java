@@ -15,7 +15,7 @@ public class EnemySpaceship1 {
 
     public EnemySpaceship1(Context context) {
         this.context = context;
-        enemySpaceship1 = BitmapFactory.decodeResource(context.getResources(), R.drawable.rocket2);
+        enemySpaceship1 = BitmapFactory.decodeResource(context.getResources(), R.drawable.submarine);
         random = new Random();
         ex = 200 + random.nextInt(400);
         ey = 0;
