@@ -12,7 +12,13 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_game_easy1.xml" value="0.4052044609665427" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_game_hard1.xml" value="0.33" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_game_medium1.xml" value="0.1703125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_game_over1.xml" value="0.1703125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_game_over2.xml" value="0.1703125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_game_over3.xml" value="0.1703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_main1.xml" value="0.1703125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_main2.xml" value="0.1703125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_main3.xml" value="0.1703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_menu1.xml" value="0.22" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_menu2.xml" value="0.22" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_menu3.xml" value="0.25" />
@@ -20,9 +26,13 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_quiz_results.xml" value="0.1703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_quiz_results2.xml" value="0.15625" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_stage1.xml" value="0.1703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_start_easy1.xml" value="0.1703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_start_hard1.xml" value="0.1703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_start_medium1.xml" value="0.21" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_start_up1.xml" value="0.33" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_start_up2.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/layout/activity_start_up3.xml" value="0.1703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1735" />
         <entry key="..\:/Users/yaako/AndroidStudioProjects/Marine_World3/app/src/main/res/layout/activity_end_easy1.xml" value="0.1" />
         <entry key="..\:/Users/yaako/AndroidStudioProjects/Marine_World3/app/src/main/res/layout/activity_game_over1.xml" value="0.1" />
