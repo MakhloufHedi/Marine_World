@@ -12,12 +12,12 @@ public class StartUp2 extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start_up1);
+        setContentView(R.layout.activity_start_up2);
 
     }
 
     public void startGame(View view) {
-        startActivity(new Intent(StartUp2.this, StageActivity1.class));
+        startActivity(new Intent(StartUp2.this, MainActivity2.class));
         finish();
     }
 }
