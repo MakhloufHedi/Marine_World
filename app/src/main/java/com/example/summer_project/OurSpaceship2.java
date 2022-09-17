@@ -28,3 +28,4 @@ public class OurSpaceship2 {
         return ourSpaceship2.getWidth();
     }
 }
+//create the OurSpaceship for level medium
