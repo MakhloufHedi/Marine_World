@@ -7,7 +7,7 @@ import android.media.SoundPool;
 public class SoundPlayer {
 
     private static SoundPool soundPool;
-    private static  int damage , game_over , gain_score , button;
+    private static  int damage , game_over , gain_score , button , start_button_shooter;
 
     public SoundPlayer(Context context){
 
@@ -25,6 +25,8 @@ public class SoundPlayer {
         game_over = soundPool.load(context , R.raw.game_over,1);
         gain_score = soundPool.load(context,R.raw.gain_score,1);
         button = soundPool.load(context,R.raw.button,1);
+        start_button_shooter = soundPool.load(context , R.raw.startbutton,1);
+
     }
 
     public void playDamageSound() {
@@ -42,5 +44,10 @@ public class SoundPlayer {
     public void playButtonSound() {
         soundPool.play(button,1.0f,1.0f,1,0,1.0f);
     }
+       
+    public void  playButtonShooterSound() { 
+        soundPool.play(start_button_shooter,1.0f,1.0f,1,0,1.0f);
+    }
+
 
 }
