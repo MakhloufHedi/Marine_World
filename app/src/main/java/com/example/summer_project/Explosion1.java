@@ -37,4 +37,4 @@ public class Explosion1 {
         return explosion1[explosionFrame1];
     }
 }
-//create the eight explosion and store in a bitmap for level easy
+//create the eight image explosion and store in a bitmap for level easy
