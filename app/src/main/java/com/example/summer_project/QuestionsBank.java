@@ -3,6 +3,7 @@ package com.example.summer_project;
 import java.util.ArrayList;
 
 public class QuestionsBank {
+    // les questions de level easy
     private static ArrayList<QuestionsList> level1Questions() {
 
         final ArrayList<QuestionsList> questionsLists = new ArrayList<>();
@@ -26,7 +27,7 @@ public class QuestionsBank {
 
     }
 
-
+// les questions de level medium
     private static ArrayList<QuestionsList> level2Questions() {
 
         final ArrayList<QuestionsList> questionsLists = new ArrayList<>();
@@ -51,7 +52,7 @@ public class QuestionsBank {
         return questionsLists;
 
     }
-
+// les questions de level hard
     private static ArrayList<QuestionsList> level3Questions() {
 
         final ArrayList<QuestionsList> questionsLists = new ArrayList<>();
@@ -76,7 +77,7 @@ public class QuestionsBank {
         return questionsLists;
 
     }
-
+// la selection des questions selon le level selectionné
     public static ArrayList<QuestionsList> getQuestions(String selectedLevel) {
         switch (selectedLevel){
             case "level1":
