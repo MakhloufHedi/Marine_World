@@ -26,17 +26,23 @@
             android:name=".StartUp1"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".StartUp2"
             android:exported="false" />
+        <activity
+            android:name=".StartUp3"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".MainActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".StageActivity1"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".MainActivity1"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".QuizResults2"
             android:exported="false" />
