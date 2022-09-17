@@ -10,6 +10,7 @@ public class MainActivity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(new SpaceShooter3(this));
+        //go to play level hard
     }
 
     @Override
