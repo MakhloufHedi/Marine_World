@@ -10,6 +10,7 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(new SpaceShooter2(this));
+        //go to play level medium
     }
 
     @Override
