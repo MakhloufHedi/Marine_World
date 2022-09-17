@@ -32,7 +32,7 @@ public class EndEasy1Activity extends AppCompatActivity {
             //Update high score
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putInt("HIGH_SCORE1", score);
-            editor.apply();
+            editor.apply();  
 
             high_score1.setText("High Score : " + score);
         } else {
