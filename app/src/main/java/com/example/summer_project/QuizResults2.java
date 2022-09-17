@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 
 public class QuizResults2 extends AppCompatActivity {
+    // derinere page si l'utilisateur n'a pas terminé toutes les questions
+// elle contient une legende game over et nbr des questions correctes et fausses
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
