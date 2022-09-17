@@ -35,3 +35,4 @@ public class EnemySpaceship2 {
         return enemySpaceship2.getHeight();
     }
 }
+//create the enemySpaceship for level medium
