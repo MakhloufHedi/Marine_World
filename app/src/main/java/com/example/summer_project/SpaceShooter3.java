@@ -61,7 +61,7 @@ public class SpaceShooter3 extends View {
         ourSpaceship3 = new OurSpaceship3(context);
         enemySpaceship3 = new EnemySpaceship3(context);
         handler = new Handler();
-        background = BitmapFactory.decodeResource(context.getResources(), R.drawable.game);
+        background = BitmapFactory.decodeResource(context.getResources(), R.drawable.shooter_back);
         lifeImage = BitmapFactory.decodeResource(context.getResources(), R.drawable.life);
         scorePaint = new Paint();
         scorePaint.setColor(Color.RED);
