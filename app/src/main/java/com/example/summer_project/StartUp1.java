@@ -14,7 +14,7 @@ public class StartUp1 extends AppCompatActivity {
         setContentView(R.layout.activity_start_up1);
 
     }
-
+//start activity of the easy level , it shows the meun of three level.
     public void startGame(View view) {
         startActivity(new Intent(StartUp1.this, MainActivity1.class));
         finish();
