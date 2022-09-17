@@ -11,12 +11,12 @@ public class StartUp3 extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start_up1);
+        setContentView(R.layout.activity_start_up3);
 
     }
 
     public void startGame(View view) {
-        startActivity(new Intent(StartUp3.this, StageActivity1.class));
+        startActivity(new Intent(StartUp3.this, MainActivity3.class));
         finish();
     }
 }
