@@ -19,9 +19,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="startGame"
         android:text="Play"
         android:textColor="#330022"
-        android:textSize="20sp"
-        android:onClick="startGame" />
+        android:textSize="50sp" />
 
 </LinearLayout>
