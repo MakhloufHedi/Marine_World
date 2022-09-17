@@ -1,3 +1,4 @@
+//made by hedi : startscreen before the game that shows you how much score each fish gives 
 package com.example.summer_project;
 
 import androidx.appcompat.app.AppCompatActivity;
