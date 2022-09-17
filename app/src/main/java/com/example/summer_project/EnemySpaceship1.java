@@ -34,3 +34,4 @@ public class EnemySpaceship1 {
         return enemySpaceship1.getHeight();
     }
 }
+//create the enemySpaceship for level easy
