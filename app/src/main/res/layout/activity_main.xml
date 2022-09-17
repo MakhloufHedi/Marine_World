@@ -84,11 +84,11 @@
             android:elevation="10dp"
             app:cardCornerRadius="60dp"
             android:layout_marginTop="25dp"
-            app:cardBackgroundColor="@color/foody_fish_blue">
+            app:cardBackgroundColor="@color/ocean_shooter_blue">
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/foody_fish_logo" />
+                android:src="@drawable/ocean_shooter_logo" />
         </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
