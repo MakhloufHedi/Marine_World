@@ -14,10 +14,10 @@ public class OurSpaceship2 {
 
     public OurSpaceship2(Context context) {
         this.context = context;
-        ourSpaceship2 = BitmapFactory.decodeResource(context.getResources(), R.drawable.rocket1);
+        ourSpaceship2 = BitmapFactory.decodeResource(context.getResources(), R.drawable.crab);
         random = new Random();
         ox = random.nextInt(SpaceShooter2.screenWidth);
-        oy = SpaceShooter2.screenHeight - ourSpaceship2.getHeight();
+        oy = SpaceShooter2.screenHeight - ourSpaceship2.getHeight() - 20;
     }
 
     public Bitmap getOurSpaceship2(){
