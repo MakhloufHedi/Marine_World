@@ -16,7 +16,7 @@ public class StartUp1 extends AppCompatActivity {
     }
 
     public void startGame(View view) {
-        startActivity(new Intent(StartUp1.this, StageActivity1.class));
+        startActivity(new Intent(StartUp1.this, MainActivity1.class));
         finish();
     }
 }
