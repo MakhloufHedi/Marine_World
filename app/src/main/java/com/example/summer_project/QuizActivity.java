@@ -38,7 +38,7 @@ public class QuizActivity extends AppCompatActivity {
         final TextView timer = findViewById(R.id.timer);
         final TextView levelName = findViewById(R.id.levelName);
         final String Minutes = getIntent().getStringExtra("Selected Level");
-
+// initialisation de clock pour chaque level
         if(Minutes.equals("level1"))
         {
             timer.setText("03:00");
@@ -77,7 +77,7 @@ public class QuizActivity extends AppCompatActivity {
         option3.setText(questionsLists.get(0).getOption3());
         option4.setText(questionsLists.get(0).getOption4());
 
-
+// la selection de reponse puis verification si elle est correct ou non
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -134,7 +134,7 @@ public class QuizActivity extends AppCompatActivity {
 
             }
         });
-
+// bouton pour aller a la question suivante
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -147,7 +147,7 @@ public class QuizActivity extends AppCompatActivity {
             }
 
         });
-
+// bouton pour arriver en arrière
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -161,7 +161,7 @@ public class QuizActivity extends AppCompatActivity {
 
 
     }
-
+ // fonction qui controle le passage a la question suivante
     private void changeNextQuestion(){
         currentQuestionPosition++;
         if ((currentQuestionPosition+1) == questionsLists.size()){
@@ -196,11 +196,12 @@ public class QuizActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
+// fonction qui met le clock en cours
     private void startTimer(TextView timerTextView)
     {
         final String getCatLevel = getIntent().getStringExtra("Cat Level");
         if (getCatLevel.equals("level1")){
+            // clock pour level 1
             quizTimer = new Timer();
             totalTimeInMins =3;
             quizTimer.scheduleAtFixedRate(new TimerTask() {
@@ -247,6 +248,7 @@ public class QuizActivity extends AppCompatActivity {
             }, 1000,500);}
 
         else if (getCatLevel.equals("level2")) {
+            // clock pour level 2
 
             quizTimer = new Timer();
             totalTimeInMins =2;
@@ -295,6 +297,7 @@ public class QuizActivity extends AppCompatActivity {
             }, 1000,500);
         }
         else {
+            // clock pour level 3
             quizTimer = new Timer();
             totalTimeInMins =1;
             quizTimer.scheduleAtFixedRate(new TimerTask() {
@@ -340,7 +343,7 @@ public class QuizActivity extends AppCompatActivity {
             }, 1000,600);}
 
     }
-
+// fonction qui calcul nombre des questions correctes
     private int getCorrectAnswer()
     {
         int correctAnswers = 0;
@@ -355,7 +358,7 @@ public class QuizActivity extends AppCompatActivity {
         return correctAnswers;
     }
 
-
+// fonction qui calcul nombre des questions incorrectes
     private int getInCorrectAnswer()
     {
         int IncorrectAnswers = 0;
@@ -369,6 +372,7 @@ public class QuizActivity extends AppCompatActivity {
         }
         return IncorrectAnswers;
     }
+     // fonction qui controle de transition a la page derniere si le temps est terminé
     @Override
     public void onBackPressed(){
         quizTimer.purge();
@@ -377,6 +381,7 @@ public class QuizActivity extends AppCompatActivity {
         startActivity(new Intent(QuizActivity.this,MainActivity.class));
         finish();
     }
+    // la fonction qui test l'option selectionné s'il est correct ou non
     private void revealAnswer(){
 
         final String getAnswer = questionsLists.get(currentQuestionPosition).getAnswer();
