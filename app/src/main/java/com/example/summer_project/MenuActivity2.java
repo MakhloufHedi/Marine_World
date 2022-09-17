@@ -21,7 +21,7 @@ public class MenuActivity2 extends AppCompatActivity {
         ImageView level3shooter = findViewById(R.id.level3shooter);
 
         soundPlayer = new SoundPlayer(this);
-
+//select the level
         level1shooter.setOnClickListener(view -> {
             Intent intent = new Intent(MenuActivity2.this ,StartUp1.class);
             startActivity(intent);
@@ -42,7 +42,7 @@ public class MenuActivity2 extends AppCompatActivity {
             soundPlayer.playButtonShooterSound();
             overridePendingTransition(R.anim.static_animation,R.anim.zoom_in);
         });
-
+//Back to main menu
         back_button2.setOnClickListener(view -> {
             Intent intent = new Intent(MenuActivity2.this ,MainActivity.class);
             startActivity(intent);
