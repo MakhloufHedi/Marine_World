@@ -1,3 +1,4 @@
+// made by hedi : end activity of the easy level , it shows highscore , score and buttons to retry , go to levels or change game
 package com.example.summer_project;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +25,7 @@ public class EndMedium1Activity extends AppCompatActivity {
         int score = getIntent().getIntExtra("SCORE", 0);
         final_score.setText(score + "");
 
-        //High Score
+        //get High Score using a shared preferance
         SharedPreferences sharedPreferences = getSharedPreferences("GAME_DATA", Context.MODE_PRIVATE);
         int highScore = sharedPreferences.getInt("HIGH_SCORE2", 0);
 
@@ -44,6 +45,7 @@ public class EndMedium1Activity extends AppCompatActivity {
         Button menu_button_medium = findViewById(R.id.menu_button_medium);
 
         soundPlayer = new SoundPlayer(this);
+// 3 buttons , retry button , go to level select area button and go to game select area button
 
         retry_button_medium.setOnClickListener(view -> {
             soundPlayer.playButtonSound();
@@ -63,7 +65,7 @@ public class EndMedium1Activity extends AppCompatActivity {
             startActivity(intent);
         });
     }
-
+// only go back using the bottons i made not by pressing the back button 
     @Override
     public void onBackPressed() {}
 }
