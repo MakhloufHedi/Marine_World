@@ -30,3 +30,4 @@ public class Shot1 {
         return shot1.getHeight();
     }
 }
+//Create a Shot for level easy
