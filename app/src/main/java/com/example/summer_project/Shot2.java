@@ -30,3 +30,4 @@ public class Shot2 {
         return shot2.getHeight();
     }
 }
+//Create a Shot for level medium
