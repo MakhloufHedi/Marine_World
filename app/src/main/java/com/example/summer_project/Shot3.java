@@ -31,3 +31,4 @@ public class Shot3 {
         return shot3.getHeight();
     }
 }
+//Create a Shot for level hard
