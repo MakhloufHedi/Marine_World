@@ -28,3 +28,4 @@ public class OurSpaceship3 {
         return ourSpaceship3.getWidth();
     }
 }
+//create the OurSpaceship for level hard
