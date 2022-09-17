@@ -15,7 +15,7 @@ public class Shot3 {
     public Shot3(Context context, int shx, int shy) {
         this.context = context;
         shot3 = BitmapFactory.decodeResource(context.getResources(),
-                R.drawable.shoot);
+                R.drawable.bullet);
         this.shx = shx;
         this.shy = shy;
         sh3= MediaPlayer.create(context,R.raw.rocket);
